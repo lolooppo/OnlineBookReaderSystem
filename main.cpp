@@ -9,6 +9,8 @@
 
 using namespace std;
 
+
+
 int ReadInt (const int& low, const int& high) {
     int value;
     cin >>  value;
@@ -20,6 +22,9 @@ int ReadInt (const int& low, const int& high) {
     return ReadInt(low, high);
 }
 
+
+
+
 int ShowReadMenu (const vector<string>& choices) {
     cerr    <<  "\nMenu...\n";
     for(int choice = 0; choice < (int)choices.size(); choice++){
@@ -27,6 +32,9 @@ int ShowReadMenu (const vector<string>& choices) {
     }
     return ReadInt(1, (int)choices.size());
 }
+
+
+
 
 string GetCurrentTimeDate () {
     auto now = std::chrono::system_clock::now();
@@ -36,6 +44,10 @@ string GetCurrentTimeDate () {
 	ss << std::put_time(std::localtime(&in_time_t), "%Y-%m-%d %X");
 	return ss.str();
 }
+
+
+
+
 
 
 ///////////////////Book///////////////////
@@ -124,6 +136,11 @@ public:
 
 
 
+
+
+
+
+
 ////////////////////Book Reading Session//////////////////////////////////
 class BookReadingSession {
 private:
@@ -184,6 +201,11 @@ public:
         return oss.str();
     }
 };
+
+
+
+
+
 
 
 
@@ -282,6 +304,13 @@ public:
         return is_admin;
     }
 };
+
+
+
+
+
+
+
 
 
 
@@ -398,6 +427,18 @@ public:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 ////////////////////Book Manager////////////////////////
 class BookManager{
 private:
@@ -452,6 +493,12 @@ public:
         return isbn_book_map;
     }
 };
+
+
+
+
+
+
 
 
 
@@ -562,6 +609,10 @@ public:
 
 
 
+
+
+
+
 //////////////////////////Administrator View///////////////////////////////
 class AdminView{
 private:
@@ -611,7 +662,12 @@ public:
 
 
 
-/////////////////////////// On line Book Reader/////////////////////////////
+
+
+
+
+
+/////////////////////////// Online Book Reader/////////////////////////////
 class OnlineBookReader {
 private:
     BookManager* book_manager{nullptr};
@@ -658,8 +714,9 @@ public:
 };
 
 
+
 int main () {
     OnlineBookReader site;
-
+    //Run system
     site.Run();
 }
