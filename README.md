@@ -1,5 +1,4 @@
 # OnlineBookReaderSystem
-Simulate Amazon Kindle 🔲📖
 
 ### System Functionalities
   - In this system, there are two types of users who can log in/sign up:
