@@ -452,6 +452,9 @@ private:
     }
 
 public:
+    ~BookManager(){
+     	FreeLoadedData();
+    }
 
     void LoadData () {
         FreeLoadedData();
